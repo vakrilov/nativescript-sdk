@@ -6,7 +6,9 @@ import { KinveyError, NotFoundError } from 'kinvey-js-sdk/dist/errors';
 import { isDefined } from 'kinvey-js-sdk/dist/utils';
 import { User } from 'kinvey-js-sdk/dist/entity';
 import { AuthType, CacheRequest, KinveyRequest, RequestMethod } from 'kinvey-js-sdk/dist/request';
-const PushPlugin = require('nativescript-push-notifications');
+// const PushPlugin = require('nativescript-push-notifications');
+
+declare var PushPlugin; // Stub
 
 export class Push extends EventEmitter {
     private _client: Client;
